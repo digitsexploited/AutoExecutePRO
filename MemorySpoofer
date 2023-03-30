@@ -1,5 +1,5 @@
  --[[
- local MemorySpooferSettings = {
+MemorySpooferSettings = {
     range1 = 500,
     range2 = 800,
    }

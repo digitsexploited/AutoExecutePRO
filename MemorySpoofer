@@ -10,7 +10,7 @@
       end
   end
   Memory:GetPropertyChangedSignal("Text"):Connect(function()
-      local Random = math.random(Settings.range1,Settings.range2)
+      local Random = math.random(MemorySpooferSettings.range1,MemorySpooferSettings.range2)
       Random = Random * 1.23 
       Memory.Text = "".. Random .." MB"
   end)

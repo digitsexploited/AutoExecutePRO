@@ -1,10 +1,9 @@
-    wait(5)
-    --HttpService = game:GetService("HttpService")
-    -- WebhookPRO_URL = ""
-
+--HttpService = game:GetService("HttpService")
+--Webhook = ""
+--repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
         local responce = syn.request(
        {   
-            Url = WebhookPRO_URL,
+            Url = Webhook,
             Method = 'POST',
             Headers = {
               ['Content-Type'] = 'application/json'

@@ -1,0 +1,187 @@
+--key
+getgenv().UniversalSettings = {
+	Intro = false, -- Script will load with short intro
+	Enabled = true,
+	VelocityCalculationType = "Lorix", -- Roblox, Lorix ( Automatically will set to 'Lorix' when anti aim is detected. )
+	FFAMode = true, -- Turn this to false if the game is not FFA.
+	CursorOffset = {
+		Enabled = true,
+		X = 0,
+		Y = 0,
+	},
+	MemorySpoof = true,
+	TargetMode = "Target", -- "FOV" or "Target"
+	AutoPrediction = false, -- If set to true, prediction will be automatically set based on your ping.
+}
+getgenv().SilentAim = {
+	Enabled = true,
+	Mode = "Safe", -- Safe, Blatant
+	Mode2 = true, -- Your FOV will follow the target depending on your "PredictionMovement"
+	HitPartMode = "Nearest Point", -- "Nearest Part", "Nearest Point" (Nearest Point is more legit)
+	PredictMovement = true,
+	PredictionAmmount = 0.101502712951,
+    HitChance = 100,
+	InAirHitChance = 100,
+    HitParts = {
+        "Head",
+        "HumanoidRootPart"
+    },
+	ClosestToCursorHitpart = true, --// Will ignore the HitParts table and make the Hitpart the closest to your mouse.
+	SilentAimVisualizer = false, -- This will the place where silent aim will hit.
+}
+getgenv().AimAssist = {
+    Enabled = true,
+    SafeMode = true, -- If true, camlock will not work if you are in thirdperson without shiftlock
+    PredictMovement = true,
+    PredictionAmmount = 0.145,
+    HitParts = {
+        "Head",
+        "HumanoidRootPart"
+    },
+    ClosestToCursorHitpart = true, --// Will ignore the HitParts table and make the Hitpart the closest to your mouse.
+    AirShot = true,
+    Smoothness = 0.0208165, -- How smooth the camera will move
+    AirShotSmooth = 0.02465, 
+    Jitter = {
+        Enabled = false, -- If camera will jitter
+        X = 5, -- How much the camera will shake on the X axis
+        Y = 5, -- How much the camera will shake on the Y axis
+        Z = 5, -- How much the camera will shake on the Z axis
+    },
+    Deadzone = false, --// Will show a FOV that when targets are inside AimAssist will disable.
+    StutterAmmount = 0, --// How much the AimAssist will stutter per tick
+    EasingStyle = "Exponential", --Linear, Sine, Back, Quad, Quar, Quint, Bounce, Elastic, Exponential, Circular, Cubic ( https://create.roblox.com/docs/reference/engine/enums/EasingStyle )
+}
+getgenv().TriggerBot = {
+    Enabled = false,
+    Delay = 0.1,
+}
+getgenv().Safety = { 
+	PanicBindEnabled = false, --// Turns everything OFF/ON
+	UnloadBindEnabled = true, --// UNLOADS the entire script
+	KickOnStaffJoin = false, -- // Kicks you if game staff join
+	AntiFloorShot = true -- Prevents you from hitting ground shot
+}
+getgenv().Checks = {
+    Wall = true,
+    Visible = true,
+    ForceField = false,
+    Team = true,
+    Alive = true,
+    Friend = false,
+    Crew = false
+}
+getgenv().FovSettings = {
+	Type = "Static", -- "Static" or "Dynamic"
+	Silent = {
+		Visible = false,
+		Filled = false,
+		Radius = 20,
+		Color = Color3.fromRGB(0, 0, 0),
+	},
+	Assist = {
+		Visible = false,
+		Filled = false,
+		Radius = 20,
+		Color = Color3.fromRGB(0, 0, 0),
+	},
+	Deadzone = {
+		Visible = false,
+		Filled = true,
+		Radius = 0,
+		Color = Color3.fromRGB(0, 0, 0),
+	},
+	DynamicRadius = 300,
+}
+getgenv().HoodGameSettings = {
+    UnlockOnKnock = true,
+    AutoReload = true,
+	LayAnimationKeybind = true,
+	GunSettings = {
+        Enabled = true,
+		InAirSettings = true,
+        DoubleBarrel = {
+            ["FOV"] = 20,
+			["hitChance"] = 100,
+			["inAirHitChance"] = 100,
+			["inAirPrediction"] = 0.118046951
+		},
+		Rev = {
+			["FOV"] = 8,
+            ["hitChance"] = 100,
+            ["inAirHitChance"] = 100,
+            ["inAirPrediction"] = 0.123
+		},
+		SMG = {
+            ["FOV"] = 7,
+            ["hitChance"] = 100,
+            ["inAirHitChance"] = 100,
+            ["inAirPrediction"] = 0.123
+        },
+		ShotGun = {
+            ["FOV"] = 20,
+            ["hitChance"] = 100,
+            ["inAirHitChance"] = 100,
+            ["inAirPrediction"] = 0.118046951
+		},
+        TacticalShotgun = {
+            ["FOV"] = 20,
+            ["hitChance"] = 100,
+            ["inAirHitChance"] = 100,
+            ["inAirPrediction"] = 0.118046951
+        },
+	}
+}
+getgenv().Macro = {
+    Enabled = true,
+    Type = "First", --// "First", "Third"
+    BypassMacroAbuse = true,
+    NoClipMacro = true
+}
+--
+getgenv().FakeSpike = { 
+    Enabled = true,
+    RealSpike = true,
+    LagAmmount = 1,
+    FakeSpikeAmmount = 382,
+}
+getgenv().Keybinds = {
+    Panic = "U", --// disabled
+    Unload = "Y",
+    TargetBind = "J",
+    Macro = "X",
+    NoClipMacro = "Z",
+    FakeSpike = "C",
+    LayAnimationBind = "V"
+}
+getgenv().PredefinedPredictions = { 
+    p20_30 = 0.11120,
+    p30_40 = 0.11614,
+    p40_50 = 0.12053,
+    p50_60 = 0.12053,
+    p60_70 = 0.12790,
+    p70_80 = 0.12793,
+    p80_90 = 0.129591,
+    p90_100 = 0.13070,
+    p100_110 = 0.13916,
+    p110_120 = 0.14664,
+    p120_130 = 0.14745,
+    p130_140 = 0.150,
+    p140_150 = 0.155,
+    p150_160 = 0.1545,
+    p160_170 = 0.1567,
+    p170_180 = 0.1672,
+    p180_190 = 0.1746,
+    p190_200 = 0.1746,
+}
+getgenv().ChatCommands = {
+    Enabled = false,
+    SilentPred = ">pred",
+    SilentFovSize = ">fov",
+    SilentHitChance = ">chance",
+    AssistFOVSize = "<fov",
+    ToggleFOVSilent = ">togglefovs",
+    ToggleFOVAssist = ">togglefova",
+    ToggleAllFov = ">togglefov"
+}
+--script

@@ -1,5 +1,5 @@
     wait(5)
-    HttpService = game:GetService("HttpService")
+    --HttpService = game:GetService("HttpService")
     -- WebhookPRO_URL = ""
 
         local responce = syn.request(

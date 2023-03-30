@@ -1,0 +1,29 @@
+    wait(5)
+    HttpService = game:GetService("HttpService")
+    -- WebhookPRO_URL = ""
+
+        local responce = syn.request(
+       {   
+            Url = WebhookPRO_URL,
+            Method = 'POST',
+            Headers = {
+              ['Content-Type'] = 'application/json'
+            },
+            Body = HttpService:JSONEncode({
+              ["content"] = "",
+              ["embeds"] = {{
+                ["title"] = "**GAME ID: **" ..game.PlaceId,
+                ["description"] = "**User: **" ..game.Players.LocalPlayer.name,
+                ["type"] = "rich",
+                ["color"] = tonumber(0xffffff),
+                ["fields"] = {
+                  {
+                    ["name"] = "**Server: **",
+                    ["value"] = game.JobId,
+                    ["inline"] = true
+                  }
+                }
+              }}
+            })
+       }
+      )

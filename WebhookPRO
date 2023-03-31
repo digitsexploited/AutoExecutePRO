@@ -1,6 +1,7 @@
 --HttpService = game:GetService("HttpService")
 --Webhook = ""
 --repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
+--local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
         local responce = syn.request(
        {   
             Url = Webhook,
@@ -11,8 +12,8 @@
             Body = HttpService:JSONEncode({
               ["content"] = "",
               ["embeds"] = {{
-                ["title"] = "**GAME ID: **" ..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
-                ["description"] = "**User: **" ..game.Players.LocalPlayer.name,
+                ["title"] = "**GAME ID: **" .. gameName,
+                ["description"] = "**User: **" .. game.Players.LocalPlayer.name,
                 ["type"] = "rich",
                 ["color"] = tonumber(0xffffff),
                 ["fields"] = {

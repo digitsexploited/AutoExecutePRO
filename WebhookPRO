@@ -11,7 +11,7 @@
             Body = HttpService:JSONEncode({
               ["content"] = "",
               ["embeds"] = {{
-                ["title"] = "**GAME ID: **" ..game.PlaceId,
+                ["title"] = "**GAME ID: **" ..game.Name,
                 ["description"] = "**User: **" ..game.Players.LocalPlayer.name,
                 ["type"] = "rich",
                 ["color"] = tonumber(0xffffff),
